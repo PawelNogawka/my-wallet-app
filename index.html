@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Wallet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wallet-container">
+      <h1 class="heading"><i class="fa-solid fa-wallet"></i> my wallet</h1>
+      <p class="subtitle">Twój osobisty menager finasów</p>
+      <div class="wallet-content">
+        <div class="left">
+          <h2>lista transakcji:</h2>
+          <div class="box">
+            <div class="incomes">
+              <h3 class="red">przychód:</h3>
+            </div>
+            <div class="expenses">
+              <h3 class="green">wydatki:</h3>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <h2>dostępne środki:</h2>
+          <h3 class="amount">0zł</h3>
+          <div class="btns-box">
+            <button class="btn add-btn">
+              <i class="fa-solid fa-plus"></i> dodaj transakcje
+            </button>
+            <button class="btn remove-all-btn">
+              <i class="fa-solid fa-trash"></i> usuń wszystko
+            </button>
+          </div>
+          <h3 class="dark-mode-heading">wybierz styl:</h3>
+          <div class="btns-box">
+            <button class="circle light active"></button>
+            <button class="circle dark"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>dodaj nową transakcje:</h2>
+      <div class="input-box">
+        <label for="name">nazwa</label>
+        <small>(podaj nazwę transakcji)</small>
+        <input id="name" type="text" />
+      </div>
+      <div class="input-box">
+        <label for="amount">kwota</label>
+        <small
+          >(podaj kwote transakcji, ale jeśli jest to wydatek wtedy dodaj "-" na
+          początku kwoty transakcji)</small
+        >
+        <input id="amount" type="number" />
+      </div>
+      <div class="input-box">
+        <label for="category">kategoria</label>
+        <small>(podaj nazwę kategori)</small>
+        <select id="category">
+          <option disabled selected value="none"></option>
+          <option value="payment">[-] Wypłata</option>
+          <option value="shoping">[-] Zakupy</option>
+          <option value="food">[-] Jedzenie</option>
+          <option value="entertainment">[-] Kino</option>
+        </select>
+      </div>
+      <div class="btns-box">
+        <button class="btn save">zapisz</button>
+        <button class="btn cancel">anuluj</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
